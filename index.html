@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>編み物・毛糸量計算ツール【無料】簡単・無料計算</title>
+    <meta name="description" content="作品サイズと編み方から必要な毛糸の量を計算。材料費の目安も算出。登録不要・完全無料でご利用いただけます。">
+    <link rel="canonical" href="https://appadaycreator.github.io/knitting-yarn-calculator/">
+    <meta property="og:title" content="編み物・毛糸量計算ツール【無料】簡単・無料計算">
+    <meta property="og:description" content="作品サイズと編み方から必要な毛糸の量を計算。材料費の目安も算出。登録不要・完全無料でご利用いただけます。">
+    <meta property="og:url" content="https://appadaycreator.github.io/knitting-yarn-calculator/">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="ja_JP">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧶</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossorigin>
+    <link rel="dns-prefetch" href="https://www.clarity.ms">
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+    <!-- GTM -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-TXQGZRF9');</script>
+    <!-- Clarity -->
+    <script type="text/javascript">(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y)})(window,document,"clarity","script","s3t9vl8h3v");</script>
+    <!-- AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8427583028015858" crossorigin="anonymous"></script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"編み物・毛糸量計算ツール","description":"作品サイズと編み方から必要な毛糸の量を計算。材料費の目安も算出。登録不要・完全無料でご利用いただけます。","url":"https://appadaycreator.github.io/knitting-yarn-calculator/","applicationCategory":"UtilityApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"JPY"}}</script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', 'Noto Sans JP', sans-serif; background: linear-gradient(135deg, #FEF3C7 0%, #FFFBEB 100%); min-height: 100vh; color: #333; line-height: 1.6; }
+        .site-header { background: #D97706; color: white; padding: 32px 20px; text-align: center; }
+        .site-header .emoji { font-size: 52px; margin-bottom: 8px; }
+        .site-header h1 { font-size: 24px; font-weight: 700; margin-bottom: 8px; }
+        .site-header p { font-size: 14px; opacity: 0.9; }
+        .container { max-width: 800px; margin: 0 auto; padding: 16px; }
+        .card { background: white; border-radius: 16px; padding: 24px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); margin-bottom: 16px; }
+        .btn { background: #D97706; color: white; border: none; padding: 14px 24px; border-radius: 10px; font-size: 16px; font-weight: 600; cursor: pointer; width: 100%; transition: opacity .2s; }
+        .btn:hover { opacity: 0.9; }
+        .btn:active { transform: scale(0.98); }
+        input, select, textarea { width: 100%; padding: 10px 14px; border: 1.5px solid #e2e8f0; border-radius: 8px; font-size: 15px; margin-top: 4px; font-family: inherit; }
+        input:focus, select:focus { outline: none; border-color: #D97706; }
+        label { font-size: 13px; font-weight: 600; color: #555; display: block; margin-top: 14px; margin-bottom: 2px; }
+        .result { display: none; }
+        .result.show { display: block; }
+        .result-value { font-size: 36px; font-weight: 700; color: #D97706; text-align: center; padding: 16px 0; }
+        .badge { display: inline-block; background: #D9770620; color: #D97706; padding: 4px 12px; border-radius: 20px; font-size: 12px; font-weight: 600; }
+        /* ── サービス固有CSS ── */
+
+        .knit-label {
+          font-size: 13px;
+          font-weight: 600;
+          color: #92400e;
+          display: block;
+          margin-bottom: 4px;
+          margin-top: 12px;
+        }
+        .knit-input {
+          border: 1.5px solid #fcd34d;
+          border-radius: 8px;
+          padding: 9px 12px;
+          font-size: 14px;
+          width: 100%;
+          box-sizing: border-box;
+          background: #fffbeb;
+          transition: border-color 0.2s;
+        }
+        .knit-input:focus {
+          outline: none;
+          border-color: #d97706;
+          background: #fff;
+        }
+        .knit-select {
+          border: 1.5px solid #fcd34d;
+          border-radius: 8px;
+          padding: 9px 12px;
+          font-size: 14px;
+          width: 100%;
+          box-sizing: border-box;
+          background: #fffbeb;
+          appearance: none;
+          cursor: pointer;
+        }
+        .knit-select:focus {
+          outline: none;
+          border-color: #d97706;
+        }
+        .knit-row {
+          display: flex;
+          gap: 12px;
+        }
+        .knit-row > div {
+          flex: 1;
+        }
+        .result-grid {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 12px;
+          margin-bottom: 14px;
+        }
+        .result-box {
+          background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%);
+          border: 1.5px solid #fcd34d;
+          border-radius: 10px;
+          padding: 14px 12px;
+          text-align: center;
+        }
+        .result-box .rb-val {
+          font-size: 1.7rem;
+          font-weight: 700;
+          color: #d97706;
+          line-height: 1.2;
+        }
+        .result-box .rb-unit {
+          font-size: 13px;
+          color: #92400e;
+          margin-top: 4px;
+        }
+        .result-box .rb-label {
+          font-size: 11px;
+          color: #b45309;
+          font-weight: 600;
+          text-transform: uppercase;
+          letter-spacing: 0.5px;
+          margin-bottom: 6px;
+        }
+        .tip-box {
+          background: #fef9c3;
+          border-left: 4px solid #d97706;
+          border-radius: 6px;
+          padding: 10px 14px;
+          font-size: 13px;
+          color: #713f12;
+          margin-top: 10px;
+          line-height: 1.6;
+        }
+        .preset-row {
+          display: flex;
+          gap: 6px;
+          flex-wrap: wrap;
+          margin-top: 6px;
+          margin-bottom: 4px;
+        }
+        .preset-chip {
+          background: #fef3c7;
+          border: 1.5px solid #fcd34d;
+          border-radius: 16px;
+          padding: 4px 12px;
+          font-size: 12px;
+          cursor: pointer;
+          color: #92400e;
+          font-weight: 600;
+          transition: all 0.15s;
+        }
+        .preset-chip:hover, .preset-chip.active {
+          background: #d97706;
+          border-color: #d97706;
+          color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TXQGZRF9" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+    <header class="site-header">
+        <div class="emoji">🧶</div>
+        <h1>編み物・毛糸量計算ツール</h1>
+        <p>作品サイズと編み方から必要な毛糸の量を計算。材料費の目安も算出。</p>
+    </header>
+
+    <main class="container">
+        <ins class="adsbygoogle" style="display:block;margin:12px 0" data-ad-client="ca-pub-8427583028015858" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
+        <div class="card">
+          <h2 style="font-size:18px;font-weight:700;margin-bottom:4px;">🧶 編み物・毛糸量計算ツール</h2>
+          <p style="font-size:13px;color:#92400e;margin-bottom:14px;">作品の種類・サイズを入力して必要な毛糸量を計算します</p>
+
+          <!-- 作品プリセット -->
+          <label class="knit-label">作品の種類（プリセット）</label>
+          <div class="preset-row" id="preset-row">
+            <button class="preset-chip active" data-preset="muffler" onclick="applyPreset(this)">マフラー</button>
+            <button class="preset-chip" data-preset="hat" onclick="applyPreset(this)">ニット帽</button>
+            <button class="preset-chip" data-preset="gloves" onclick="applyPreset(this)">手袋</button>
+            <button class="preset-chip" data-preset="sweater" onclick="applyPreset(this)">セーター</button>
+            <button class="preset-chip" data-preset="vest" onclick="applyPreset(this)">ベスト</button>
+            <button class="preset-chip" data-preset="socks" onclick="applyPreset(this)">靴下</button>
+            <button class="preset-chip" data-preset="baby" onclick="applyPreset(this)">ベビー用品</button>
+            <button class="preset-chip" data-preset="custom" onclick="applyPreset(this)">カスタム</button>
+          </div>
+
+          <!-- サイズ入力 -->
+          <div class="knit-row">
+            <div>
+              <label class="knit-label">幅 (cm)</label>
+              <input type="number" id="width" class="knit-input" placeholder="例: 20" min="1" max="200" value="20">
+            </div>
+            <div>
+              <label class="knit-label">長さ (cm)</label>
+              <input type="number" id="length" class="knit-input" placeholder="例: 160" min="1" max="500" value="160">
+            </div>
+          </div>
+
+          <!-- 毛糸の太さ -->
+          <label class="knit-label">毛糸の太さ</label>
+          <select id="yarn-weight" class="knit-select">
+            <option value="lace">レース糸（極細）</option>
+            <option value="fingering">フィンガリング（細）</option>
+            <option value="sport">スポーツ（中細）</option>
+            <option value="dk" selected>DK（合太）</option>
+            <option value="worsted">ワーステッド（並太）</option>
+            <option value="bulky">バルキー（極太）</option>
+            <option value="super-bulky">スーパーバルキー（超極太）</option>
+          </select>
+
+          <!-- 編み方 -->
+          <label class="knit-label">編み方</label>
+          <select id="stitch-type" class="knit-select">
+            <option value="stockinette" selected>メリヤス編み（表編み）</option>
+            <option value="garter">ガーター編み</option>
+            <option value="rib">ゴム編み（リブ）</option>
+            <option value="seed">シード編み</option>
+            <option value="cable">ケーブル編み</option>
+            <option value="lace-pattern">レース模様</option>
+          </select>
+
+          <!-- 毛糸単価（任意） -->
+          <label class="knit-label">毛糸の単価（円/100m）<span style="font-weight:400;color:#b45309;">（任意）</span></label>
+          <input type="number" id="yarn-price" class="knit-input" placeholder="例: 500（省略可）" min="0" max="100000">
+
+          <button class="btn" style="margin-top:20px;width:100%;" onclick="calculate()">🧮 計算する</button>
+
+          <div class="result" id="result" style="margin-top:16px;">
+            <div class="card">
+              <h3 style="font-size:15px;font-weight:700;margin-bottom:12px;color:#D97706;">計算結果</h3>
+              <div class="result-grid">
+                <div class="result-box">
+                  <div class="rb-label">必要な毛糸</div>
+                  <div class="rb-val" id="yarn-meters">—</div>
+                  <div class="rb-unit">m</div>
+                </div>
+                <div class="result-box">
+                  <div class="rb-label">玉数の目安</div>
+                  <div class="rb-val" id="yarn-balls">—</div>
+                  <div class="rb-unit">玉</div>
+                </div>
+                <div class="result-box">
+                  <div class="rb-label">重量の目安</div>
+                  <div class="rb-val" id="yarn-grams">—</div>
+                  <div class="rb-unit">g</div>
+                </div>
+                <div class="result-box">
+                  <div class="rb-label">材料費目安</div>
+                  <div class="rb-val" id="yarn-cost">—</div>
+                  <div class="rb-unit">円</div>
+                </div>
+              </div>
+              <div id="detail" style="color:#92400e;font-size:13px;margin-bottom:8px;"></div>
+              <div class="tip-box" id="tip-box"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 関連サービス -->
+        <div class="card" style="margin-top:8px;">
+            <h3 style="font-size:13px;font-weight:600;color:#888;margin-bottom:10px;">🔗 関連サービス</h3>
+            <div style="display:flex;flex-direction:column;gap:6px;">
+                <a href="https://appadaycreator.github.io/craft-material-calculator/" style="color:#6366f1;font-size:13px;text-decoration:none;padding:6px 0;border-bottom:1px solid #f1f5f9;">🧵 手芸・クラフト材料費計算 →</a>
+                <a href="https://appadaycreator.github.io/hobby-cost-simulator/" style="color:#6366f1;font-size:13px;text-decoration:none;padding:6px 0;border-bottom:1px solid #f1f5f9;">🎯 趣味コストシミュレーター →</a>
+            </div>
+        </div>
+
+        <ins class="adsbygoogle" style="display:block;margin:12px 0" data-ad-client="ca-pub-8427583028015858" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </main>
+
+    <footer style="text-align:center;padding:20px;color:white;font-size:12px;opacity:0.75;margin-top:8px;">
+        <p><a href="https://appadaycreator.github.io/" style="color:white;">AppADayCreator</a>
+        | <a href="privacy-policy.html" style="color:white;">プライバシーポリシー</a>
+        | <a href="terms.html" style="color:white;">利用規約</a>
+        | <a href="contact.html" style="color:white;">お問い合わせ</a></p>
+        <p style="margin-top:6px;">© 2025 AppADayCreator. All services are free.</p>
+    </footer>
+
+    <script>
+    const BTN_COLOR = '#D97706';
+
+    // 作品プリセット定義 [幅cm, 長さcm]
+    const PRESETS = {
+      muffler:  { width: 20,  length: 160 },
+      hat:      { width: 55,  length: 22  },
+      gloves:   { width: 20,  length: 25  },
+      sweater:  { width: 120, length: 65  },
+      vest:     { width: 100, length: 55  },
+      socks:    { width: 20,  length: 40  },
+      baby:     { width: 40,  length: 50  },
+      custom:   { width: null, length: null }
+    };
+
+    // 毛糸の太さごとの係数 [m/100g, 1玉の標準m数, g/cm²(メリヤス)]
+    const YARN_SPECS = {
+      'lace':        { mPer100g: 800, ballM: 400, gPerCm2: 0.010 },
+      'fingering':   { mPer100g: 400, ballM: 200, gPerCm2: 0.020 },
+      'sport':       { mPer100g: 280, ballM: 150, gPerCm2: 0.028 },
+      'dk':          { mPer100g: 220, ballM: 100, gPerCm2: 0.036 },
+      'worsted':     { mPer100g: 180, ballM: 100, gPerCm2: 0.044 },
+      'bulky':       { mPer100g: 130, ballM: 50,  gPerCm2: 0.062 },
+      'super-bulky': { mPer100g: 80,  ballM: 50,  gPerCm2: 0.100 }
+    };
+
+    // 編み方の消費係数（メリヤス比）
+    const STITCH_FACTOR = {
+      stockinette: 1.0,
+      garter:      1.2,
+      rib:         1.15,
+      seed:        1.1,
+      cable:       1.35,
+      'lace-pattern': 0.9
+    };
+
+    document.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('input[type="number"], select').forEach(inp => {
+        inp.addEventListener('keydown', e => { if (e.key === 'Enter') calculate(); });
+      });
+      // 初期プリセット適用
+      applyPreset(document.querySelector('.preset-chip.active'));
+    });
+
+    function applyPreset(btn) {
+      document.querySelectorAll('.preset-chip').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const p = PRESETS[btn.dataset.preset];
+      if (p.width !== null) {
+        document.getElementById('width').value = p.width;
+        document.getElementById('length').value = p.length;
+      }
+    }
+
+    function calculate() {
+      const width  = parseFloat(document.getElementById('width').value)  || 0;
+      const length = parseFloat(document.getElementById('length').value) || 0;
+      const yarnWeight = document.getElementById('yarn-weight').value;
+      const stitchType = document.getElementById('stitch-type').value;
+      const yarnPrice  = parseFloat(document.getElementById('yarn-price').value) || 0;
+
+      if (width <= 0 || length <= 0) {
+        alert('幅と長さを正しく入力してください');
+        return;
+      }
+
+      const spec   = YARN_SPECS[yarnWeight];
+      const factor = STITCH_FACTOR[stitchType] || 1.0;
+      const area   = width * length; // cm²
+
+      // 必要グラム数 = 面積 × g/cm² × 編み方係数
+      const grams  = area * spec.gPerCm2 * factor;
+      // メートル換算
+      const meters = grams * spec.mPer100g / 100;
+      // 玉数（切り上げ）
+      const balls  = Math.ceil(meters / spec.ballM);
+      // 材料費
+      const cost   = yarnPrice > 0 ? Math.ceil(meters / 100 * yarnPrice) : null;
+
+      // 余裕分（+10%）を加算した推奨値
+      const metersRec = Math.ceil(meters * 1.1);
+      const ballsRec  = Math.ceil(metersRec / spec.ballM);
+      const gramsRec  = Math.ceil(grams * 1.1);
+
+      document.getElementById('yarn-meters').textContent = metersRec.toLocaleString();
+      document.getElementById('yarn-balls').textContent  = ballsRec.toLocaleString();
+      document.getElementById('yarn-grams').textContent  = gramsRec.toLocaleString();
+      document.getElementById('yarn-cost').textContent   = cost !== null ? cost.toLocaleString() : '—';
+
+      const stitchNames = {
+        stockinette: 'メリヤス編み', garter: 'ガーター編み', rib: 'ゴム編み',
+        seed: 'シード編み', cable: 'ケーブル編み', 'lace-pattern': 'レース模様'
+      };
+      const weightNames = {
+        lace: 'レース糸', fingering: 'フィンガリング', sport: 'スポーツ',
+        dk: 'DK（合太）', worsted: 'ワーステッド', bulky: 'バルキー', 'super-bulky': 'スーパーバルキー'
+      };
+
+      document.getElementById('detail').textContent =
+        '計算条件: ' + width + 'cm × ' + length + 'cm ／ '
+        + weightNames[yarnWeight] + ' ／ ' + stitchNames[stitchType]
+        + '（余裕分+10%を含む）';
+
+      const tips = [];
+      tips.push('1玉の長さは ' + spec.ballM + 'm（標準）として計算しています。');
+      if (stitchType === 'cable') tips.push('ケーブル編みは毛糸の消費が多め。予備を多めに用意しましょう。');
+      if (yarnWeight === 'super-bulky' || yarnWeight === 'bulky') tips.push('太い毛糸は進みが早く初心者にも向いています。');
+      if (balls >= 5) tips.push('大作ですね！ロット番号の統一をお忘れなく。');
+      tips.push('実際の使用量は個人の編み具合（手加減）で±20%程度変わる場合があります。');
+
+      document.getElementById('tip-box').innerHTML = '💡 ' + tips.join('<br>💡 ');
+
+      document.getElementById('result').classList.add('show');
+      document.getElementById('result').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+    </script>
+</body>
+</html>
