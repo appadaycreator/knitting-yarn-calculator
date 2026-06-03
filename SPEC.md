@@ -3,8 +3,8 @@
 ## 概要
 
 **サービス名**: Knitting Yarn Calculator
-**バージョン**: 1.0.0
-**更新日**: 2026-05-27
+**バージョン**: 1.0.1
+**更新日**: 2026-06-03
 **URL**: https://appadaycreator.com/knitting-yarn-calculator/
 
 作品サイズと編み方から必要な毛糸の量を計算。材料費の目安も算出。登録不要・完全無料でご利用いただけます。
@@ -20,6 +20,15 @@
 - HTML5 / CSS3 / Vanilla JavaScript
 - PWA対応（manifest.json / Service Worker）
 - レスポンシブデザイン（モバイルファースト）
+- WCAG 2.1 AA準拠（アクセシビリティ対応）
+
+## アクセシビリティ
+
+**v1.0.1更新** (2026-06-03)
+- プリセットボタン8個にaria-labelを追加
+- 計算ボタンにaria-labelを追加  
+- Amazonアフィリエイトリンクにaria-labelを追加
+- スクリーンリーダー対応の改善
 
 ## 使い方
 
