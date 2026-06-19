@@ -401,24 +401,24 @@ ins.adsbygoogle[data-ad-status="unfilled"]{display:none!important;margin:0!impor
           </div>
         </div>
     </header>
-<div style="background:#4338ca;padding:5px 12px;text-align:right;font-size:.78rem"><a href="/blog/" style="color:#c7d2fe;text-decoration:none;font-weight:600">📖 コラム</a>&nbsp;｜&nbsp;<a href="/" style="color:#c7d2fe;text-decoration:none">ホーム</a></div>
+<div style="background:var(--primary-dark);padding:5px 12px;text-align:right;font-size:.78rem"><a href="/blog/" style="color:#F3EADD;text-decoration:none;font-weight:600">📖 コラム</a>&nbsp;｜&nbsp;<a href="/" style="color:#F3EADD;text-decoration:none">ホーム</a></div>
 <!-- r21-breadcrumb -->
-<nav aria-label="パンくずリスト" style="background:#f8fafc;border-bottom:1px solid #e2e8f0;padding:5px 16px;font-size:.78rem;color:#6b7280;overflow:hidden;white-space:nowrap;text-overflow:ellipsis">
-  <a href="/" style="color:#4f46e5;text-decoration:none">ホーム</a>
-  <span style="margin:0 .35rem;color:#9ca3af">›</span>
-  <span style="color:#374151">編み物・毛糸量計算ツール【無料】簡単・無料計算</span>
+<nav aria-label="パンくずリスト" style="background:var(--cream2);border-bottom:1px solid var(--line);padding:5px 16px;font-size:.78rem;color:var(--ink-soft);overflow:hidden;white-space:nowrap;text-overflow:ellipsis">
+  <a href="/" style="color:var(--accent-dark);text-decoration:none">ホーム</a>
+  <span style="margin:0 .35rem;color:#b9a98f">›</span>
+  <span style="color:var(--ink)">編み物・毛糸量計算ツール【無料】簡単・無料計算</span>
 </nav>
 
 
     <main id="main-content" class="container" role="main" aria-label="編み物・毛糸量計算ツールのメインコンテンツ">
-<nav aria-label="パンくずリスト" style="background:#f8fafc;border-bottom:1px solid #e2e8f0;padding:6px 0;">
+<nav aria-label="パンくずリスト" style="background:var(--cream2);border-bottom:1px solid var(--line);padding:6px 0;">
   <div class="container mx-auto px-4">
-    <ol style="display:flex;flex-wrap:wrap;align-items:center;gap:4px;font-size:0.8rem;color:#6b7280;list-style:none;margin:0;padding:0;">
-      <li><a href="https://appadaycreator.com/" style="color:#4b5563;text-decoration:none;" onmouseover="this.style.color='#2563eb'" onmouseout="this.style.color='#4b5563'">ホーム</a></li>
-      <li style="color:#9ca3af;">›</li>
-      <li><a href="https://appadaycreator.com/category/finance/" style="color:#4b5563;text-decoration:none;" onmouseover="this.style.color='#2563eb'" onmouseout="this.style.color='#4b5563'">計算機・お金</a></li>
-      <li style="color:#9ca3af;">›</li>
-      <li style="color:#1f2937;">編み物・毛糸量計算ツール簡単・無料計算</li>
+    <ol style="display:flex;flex-wrap:wrap;align-items:center;gap:4px;font-size:0.8rem;color:var(--ink-soft);list-style:none;margin:0;padding:0;">
+      <li><a href="https://appadaycreator.com/" style="color:var(--ink-soft);text-decoration:none;" onmouseover="this.style.color='#E08A4C'" onmouseout="this.style.color='#7A6A57'">ホーム</a></li>
+      <li style="color:#b9a98f;">›</li>
+      <li><a href="https://appadaycreator.com/category/finance/" style="color:var(--ink-soft);text-decoration:none;" onmouseover="this.style.color='#E08A4C'" onmouseout="this.style.color='#7A6A57'">計算機・お金</a></li>
+      <li style="color:#b9a98f;">›</li>
+      <li style="color:var(--ink);">編み物・毛糸量計算ツール簡単・無料計算</li>
     </ol>
   </div>
 </nav>
@@ -510,7 +510,7 @@ ins.adsbygoogle[data-ad-status="unfilled"]{display:none!important;margin:0!impor
           <div class="error-msg" id="goal-error"></div>
 
           <!-- 前回使用した値ボタン -->
-          <button type="button" class="btn" style="margin-top:16px;background:#8B5CF6;" onclick="loadLastValues()" aria-label="前回使用した入力値を復元">↩️ 前回使用した値を復元</button>
+          <button type="button" class="btn" style="margin-top:16px;background:var(--primary);box-shadow:0 6px 16px rgba(139,115,85,.3);" onclick="loadLastValues()" aria-label="前回使用した入力値を復元">↩️ 前回使用した値を復元</button>
 
           <!-- 履歴パネル -->
           <div class="history-panel" id="history-panel">
@@ -574,9 +574,9 @@ ins.adsbygoogle[data-ad-status="unfilled"]{display:none!important;margin:0!impor
               </div>
               <!-- エクスポートボタン -->
               <div style="margin-top:20px;border-top:1px solid #e5e7eb;padding-top:16px;display:flex;gap:8px;flex-wrap:wrap;">
-                <button onclick="window.print()" style="flex:1;min-width:120px;background:#D97706;color:white;border:none;padding:12px 16px;border-radius:8px;font-size:13px;font-weight:600;cursor:pointer;min-height:44px;display:flex;align-items:center;justify-content:center;" aria-label="結果を印刷">🖨️ 印刷</button>
-                <button onclick="copyResultToClipboard()" style="flex:1;min-width:120px;background:#7c3aed;color:white;border:none;padding:12px 16px;border-radius:8px;font-size:13px;font-weight:600;cursor:pointer;min-height:44px;display:flex;align-items:center;justify-content:center;" aria-label="結果をコピー">📋 コピー</button>
-                <button onclick="downloadCSV()" style="flex:1;min-width:120px;background:#10b981;color:white;border:none;padding:12px 16px;border-radius:8px;font-size:13px;font-weight:600;cursor:pointer;min-height:44px;display:flex;align-items:center;justify-content:center;" aria-label="CSVダウンロード">📥 CSV</button>
+                <button onclick="window.print()" style="flex:1;min-width:120px;background:var(--accent-dark);color:white;border:none;padding:12px 16px;border-radius:8px;font-size:13px;font-weight:600;cursor:pointer;min-height:44px;display:flex;align-items:center;justify-content:center;" aria-label="結果を印刷">🖨️ 印刷</button>
+                <button onclick="copyResultToClipboard()" style="flex:1;min-width:120px;background:var(--primary);color:white;border:none;padding:12px 16px;border-radius:8px;font-size:13px;font-weight:600;cursor:pointer;min-height:44px;display:flex;align-items:center;justify-content:center;" aria-label="結果をコピー">📋 コピー</button>
+                <button onclick="downloadCSV()" style="flex:1;min-width:120px;background:var(--primary-dark);color:white;border:none;padding:12px 16px;border-radius:8px;font-size:13px;font-weight:600;cursor:pointer;min-height:44px;display:flex;align-items:center;justify-content:center;" aria-label="CSVダウンロード">📥 CSV</button>
               </div>
               <!-- トースト通知 -->
               <div id="toast" style="position:fixed;bottom:20px;right:20px;background:#333;color:white;padding:14px 20px;border-radius:8px;font-size:13px;display:none;z-index:9999;box-shadow:0 4px 12px rgba(0,0,0,0.15);animation:slideIn 0.3s ease-out;" role="alert" aria-live="polite"></div>
@@ -639,8 +639,8 @@ ins.adsbygoogle[data-ad-status="unfilled"]{display:none!important;margin:0!impor
         <div class="card" style="margin-top:8px;">
             <h3 style="font-size:13px;font-weight:600;color:#888;margin-bottom:10px;">🔗 関連サービス</h3>
             <div style="display:flex;flex-direction:column;gap:6px;">
-                <a href="https://appadaycreator.com/craft-material-calculator/" style="color:#7c3aed;font-size:13px;text-decoration:none;padding:6px 0;border-bottom:1px solid #f1f5f9;">🧵 手芸・クラフト材料費計算 →</a>
-                <a href="https://appadaycreator.com/hobby-cost-simulator/" style="color:#7c3aed;font-size:13px;text-decoration:none;padding:6px 0;border-bottom:1px solid #f1f5f9;">🎯 趣味コストシミュレーター →</a>
+                <a href="https://appadaycreator.com/craft-material-calculator/" style="color:var(--accent-dark);font-size:13px;text-decoration:none;padding:6px 0;border-bottom:1px solid var(--line);">🧵 手芸・クラフト材料費計算 →</a>
+                <a href="https://appadaycreator.com/hobby-cost-simulator/" style="color:var(--accent-dark);font-size:13px;text-decoration:none;padding:6px 0;border-bottom:1px solid var(--line);">🎯 趣味コストシミュレーター →</a>
                 
             </div>
         </div>
@@ -649,31 +649,31 @@ ins.adsbygoogle[data-ad-status="unfilled"]{display:none!important;margin:0!impor
         <script>try{try{(adsbygoogle = window.adsbygoogle || []).push({});}catch(e){}}catch(e){}</script>
 
         <!-- 使い方セクション -->
-        <div class="card" style="margin-top:8px;background:#f8fafc;">
-            <h2 style="font-size:15px;font-weight:700;margin-bottom:12px;color:#374151;">📖 使い方</h2>
-            <ol style="padding-left:20px;font-size:13px;color:#475569;line-height:1.9;">
-                <li>ページを開き、入力フォームの項目を確認する</li>
-                <li>必要な情報を入力または選択する</li>
-                <li>実行ボタンをクリックして結果を取得する</li>
-                <li>表示された結果・アドバイスを確認する</li>
-                <li>必要に応じてコピー・SNSシェアで活用する</li>
+        <div class="card" style="margin-top:8px;background:var(--cream2);">
+            <h2 style="font-size:15px;font-weight:700;margin-bottom:12px;color:var(--primary);">📖 使い方</h2>
+            <ol style="padding-left:20px;font-size:13px;color:var(--ink-soft);line-height:1.9;">
+                <li>作品の種類（プリセット）を選ぶ、または幅・長さを入力する</li>
+                <li>毛糸の太さ・編み方を選択する（任意で単価・目標値も入力）</li>
+                <li>「計算する」ボタンを押して必要量・玉数・材料費を取得する</li>
+                <li>表示された結果・グラフ・アドバイスを確認する</li>
+                <li>必要に応じて印刷・コピー・CSV・SNSシェアで活用する</li>
             </ol>
         </div>
 
         <!-- FAQ セクション -->
         <div class="card" style="margin-top:8px;">
-            <h2 style="font-size:15px;font-weight:700;margin-bottom:14px;color:#374151;">❓ よくある質問</h2>
-            <div style="display:flex;flex-direction:column;gap:14px;">
-            
-            
-            
-            
-            
+            <h2 style="font-size:15px;font-weight:700;margin-bottom:14px;color:var(--primary);">❓ よくある質問</h2>
+            <div style="display:flex;flex-direction:column;gap:10px;">
+                <details style="background:var(--cream);border:1px solid var(--line);border-radius:10px;padding:4px 16px;"><summary style="cursor:pointer;padding:12px 0;font-weight:700;color:var(--primary);font-size:14px;">編み物・毛糸量計算ツールは無料で使えますか？</summary><p style="padding:0 0 14px;font-size:13px;color:var(--ink-soft);line-height:1.85;">はい、完全無料・登録不要でご利用いただけます。回数制限もなく、何度でもお使いいただけます。</p></details>
+                <details style="background:var(--cream);border:1px solid var(--line);border-radius:10px;padding:4px 16px;"><summary style="cursor:pointer;padding:12px 0;font-weight:700;color:var(--primary);font-size:14px;">スマートフォンでも使えますか？</summary><p style="padding:0 0 14px;font-size:13px;color:var(--ink-soft);line-height:1.85;">はい、スマートフォン・タブレット・PCすべてに最適化されています。手芸店でその場で確認することもできます。</p></details>
+                <details style="background:var(--cream);border:1px solid var(--line);border-radius:10px;padding:4px 16px;"><summary style="cursor:pointer;padding:12px 0;font-weight:700;color:var(--primary);font-size:14px;">入力したデータはサーバーに保存されますか？</summary><p style="padding:0 0 14px;font-size:13px;color:var(--ink-soft);line-height:1.85;">いいえ。すべての処理はブラウザ内で完結し、入力内容がサーバーへ送信されることはありません。計算履歴はお使いの端末内にのみ保存されます。</p></details>
+                <details style="background:var(--cream);border:1px solid var(--line);border-radius:10px;padding:4px 16px;"><summary style="cursor:pointer;padding:12px 0;font-weight:700;color:var(--primary);font-size:14px;">毛糸量の計算結果は正確ですか？</summary><p style="padding:0 0 14px;font-size:13px;color:var(--ink-soft);line-height:1.85;">ゲージ（編み目の密度）を基に算出した参考値です。実際の消費量は個人の編み具合で±20%程度変わる場合があるため、1〜2玉多めの購入をおすすめします。</p></details>
+                <details style="background:var(--cream);border:1px solid var(--line);border-radius:10px;padding:4px 16px;"><summary style="cursor:pointer;padding:12px 0;font-weight:700;color:var(--primary);font-size:14px;">玉数や材料費以外に何が計算できますか？</summary><p style="padding:0 0 14px;font-size:13px;color:var(--ink-soft);line-height:1.85;">必要なメートル数・グラム数、毛糸の太さによる消費量比較などが計算できます。毛糸の単価を入力すれば材料費の概算も算出できます。</p></details>
             </div>
         </div>
 
         <!-- SNSシェアCTA -->
-        <div class="card" style="margin-top:8px;text-align:center;background:#f0f9ff;" role="complementary" aria-label="SNSシェア">
+        <div class="card" style="margin-top:8px;text-align:center;background:var(--cream2);" role="complementary" aria-label="SNSシェア">
             <p style="font-size:13px;font-weight:600;color:#374151;margin-bottom:10px;">📣 友人・家族にシェアする</p>
             <div style="display:flex;gap:8px;justify-content:center;flex-wrap:wrap;">
                 <a href="https://twitter.com/intent/tweet?text=%E7%B7%A8%E3%81%BF%E7%89%A9%E3%83%BB%E6%AF%9B%E7%B3%B8%E9%87%8F%E8%A8%88%E7%AE%97%E3%83%84%E3%83%BC%E3%83%AB%20%23無料ツール&url=https%3A%2F%2Fappadaycreator.com%2Fknitting-yarn-calculator%2F" target="_blank" rel="noopener" aria-label="編み物・毛糸量計算ツールをXでシェア" style="background:#1DA1F2;color:white;padding:8px 16px;border-radius:8px;font-size:13px;text-decoration:none;font-weight:600;min-height:44px;display:inline-flex;align-items:center;">𝕏 シェア</a>
@@ -686,71 +686,77 @@ ins.adsbygoogle[data-ad-status="unfilled"]{display:none!important;margin:0!impor
     
 <section aria-labelledby="faq-h" class="bg-white rounded-2xl shadow-md p-4 mb-4" style="max-width:740px;margin-left:auto;margin-right:auto">
   
-<div style="background:#f0f7ff;border:1px solid #bfdbfe;border-radius:12px;padding:1.5rem 1.75rem;margin:2rem 0" id="tool-desc-box">
-  <h2 style="font-size:1.05rem;font-weight:800;color:#1e40af;margin:0 0 1rem">📋 このツールの詳細</h2>
-  <p style="color:#374151;margin:0 0 .75rem;line-height:1.8">「編み物・毛糸量計算ツール」は、数値を入力するだけで結果をすぐに確認できる無料の計算ツールです。</p>
+<div style="background:var(--cream);border:1px solid var(--line);border-radius:12px;padding:1.5rem 1.75rem;margin:2rem 0" id="tool-desc-box">
+  <h2 style="font-size:1.05rem;font-weight:800;color:var(--primary);margin:0 0 1rem">📋 このツールの詳細</h2>
+  <p style="color:var(--ink);margin:0 0 .75rem;line-height:1.8">「編み物・毛糸量計算ツール」は、作品サイズと糸の太さを入力するだけで、必要な毛糸量・玉数・材料費をすぐに確認できる無料の計算ツールです。</p>
 </div>
-<div style="background:#eaf4fb;border-left:4px solid #1976d2;padding:20px 24px;margin:24px 0;border-radius:0 8px 8px 0">
-  <h3 style="font-size:1.1rem;font-weight:800;color:#1e3a5f">このツールでできること</h3>
-  <p style="margin:8px 0 0;line-height:1.7;color:#1a1a2e">作成したいアイテム（セーター・マフラー等）・サイズ・使用する糸の太さを入力すると、必要な毛糸の量（グラム・玉数）を計算します。棒針・かぎ針別の推奨針サイズも確認できます。</p>
+<div style="background:var(--cream2);border-left:4px solid var(--primary);padding:20px 24px;margin:24px 0;border-radius:0 8px 8px 0">
+  <h3 style="font-size:1.1rem;font-weight:800;color:var(--primary)">このツールでできること</h3>
+  <p style="margin:8px 0 0;line-height:1.7;color:var(--ink)">作成したいアイテム（セーター・マフラー等）・サイズ・使用する糸の太さを入力すると、必要な毛糸の量（メートル・グラム・玉数）を計算します。毛糸の太さごとの消費量比較もグラフで確認できます。</p>
 </div>
-<div style="background:#f0fdf4;border-left:4px solid #388e3c;padding:20px 24px;margin:24px 0;border-radius:0 8px 8px 0">
-  <h3 style="font-size:1.1rem;font-weight:800;color:#1b5e20">活用シーン・使い方</h3>
-  <p style="margin:8px 0 0;line-height:1.7;color:#1a1a2e">編み物作品の材料を購入する前の計算や、糸が足りるかどうかの確認に活用できます。オリジナルデザインや、既存パターンのサイズ変更時の糸量換算にも役立ちます。</p>
+<div style="background:var(--cream2);border-left:4px solid var(--accent-dark);padding:20px 24px;margin:24px 0;border-radius:0 8px 8px 0">
+  <h3 style="font-size:1.1rem;font-weight:800;color:var(--accent-dark)">活用シーン・使い方</h3>
+  <p style="margin:8px 0 0;line-height:1.7;color:var(--ink)">編み物作品の材料を購入する前の計算や、糸が足りるかどうかの確認に活用できます。オリジナルデザインや、既存パターンのサイズ変更時の糸量換算にも役立ちます。</p>
 </div>
-<div style="background:#fff8e1;border-left:4px solid #f57c00;padding:20px 24px;margin:24px 0;border-radius:0 8px 8px 0">
-  <h3 style="font-size:1.1rem;font-weight:800;color:#e65100">注意点・補足</h3>
-  <p style="margin:8px 0 0;line-height:1.7;color:#1a1a2e">毛糸の必要量はゲージ（編み目の密度）によって変わります。必ずゲージを合わせてから本番の計算をしてください。余裕を持って1〜2玉多めに購入することをおすすめします。</p>
+<div style="background:#fff8e1;border-left:4px solid var(--accent-dark);padding:20px 24px;margin:24px 0;border-radius:0 8px 8px 0">
+  <h3 style="font-size:1.1rem;font-weight:800;color:#b45309">注意点・補足</h3>
+  <p style="margin:8px 0 0;line-height:1.7;color:var(--ink)">毛糸の必要量はゲージ（編み目の密度）によって変わります。必ずゲージを合わせてから本番の計算をしてください。余裕を持って1〜2玉多めに購入することをおすすめします。</p>
 </div>
 <!-- r22-editorial -->
-<div style="background:#eff6ff;border:1px solid #bfdbfe;border-radius:.75rem;padding:1.5rem;margin:1.5rem 0">
-  <h2 style="font-size:1.05rem;font-weight:800;color:#1e3a8a;margin:0 0 1rem;border-left:4px solid #2563eb;padding-left:.75rem">学習・語学の効果と習慣データ</h2>
-  <p style="font-size:.88rem;color:#4b5563;margin:0 0 .75rem">文部科学省・研究機関のデータをもとに、効果的な学習方法と習慣化のポイントを整理しました。</p>
+<div style="background:var(--cream);border:1px solid var(--line);border-radius:.75rem;padding:1.5rem;margin:1.5rem 0">
+  <h2 style="font-size:1.05rem;font-weight:800;color:var(--primary);margin:0 0 1rem;border-left:4px solid var(--accent);padding-left:.75rem">毛糸の太さ別・必要量の目安データ</h2>
+  <p style="font-size:.88rem;color:var(--ink-soft);margin:0 0 .75rem">代表的な毛糸の太さ（ウェイト）ごとに、1玉あたりの長さと標準的なゲージの目安を整理しました。計算前の参考にご活用ください。</p>
   <table style="width:100%;border-collapse:collapse;font-size:.83rem">
     <thead>
-      <tr style="background:#bfdbfe">
-        <th style="padding:.5rem .75rem;text-align:left;border:1px solid #bfdbfe;color:#1e3a8a">項目</th>
-        <th style="padding:.5rem .75rem;text-align:left;border:1px solid #bfdbfe;color:#1e3a8a">データ</th>
-        <th style="padding:.5rem .75rem;text-align:left;border:1px solid #bfdbfe;color:#1e3a8a">出典</th>
+      <tr style="background:var(--cream2)">
+        <th style="padding:.5rem .75rem;text-align:left;border:1px solid var(--line);color:var(--primary)">太さ（ウェイト）</th>
+        <th style="padding:.5rem .75rem;text-align:left;border:1px solid var(--line);color:var(--primary)">1玉の目安</th>
+        <th style="padding:.5rem .75rem;text-align:left;border:1px solid var(--line);color:var(--primary)">ゲージ目安（10cm）</th>
       </tr>
     </thead>
     <tbody>
-      <tr style="background:#eff6ff">
-        <td style="padding:.5rem .75rem;border:1px solid #bfdbfe;font-weight:600;color:#1e3a8a">英語習熟度（EF EPI）日本の順位</td>
-        <td style="padding:.5rem .75rem;border:1px solid #bfdbfe"><strong>EF EPI 2023年：世界87位（87カ国中）</strong></td>
-        <td style="padding:.5rem .75rem;border:1px solid #bfdbfe;font-size:.78rem;color:#6b7280">Education First「EFEnglish Proficiency Index 2023」</td>
+      <tr style="background:#fff">
+        <td style="padding:.5rem .75rem;border:1px solid var(--line);font-weight:600;color:var(--ink)">レース糸（極細）</td>
+        <td style="padding:.5rem .75rem;border:1px solid var(--line)"><strong>約400m / 50g</strong></td>
+        <td style="padding:.5rem .75rem;border:1px solid var(--line);font-size:.8rem;color:var(--ink-soft)">約32〜40目</td>
       </tr>
-      <tr style="">
-        <td style="padding:.5rem .75rem;border:1px solid #bfdbfe;font-weight:600;color:#1e3a8a">社会人の学習時間（1日平均）</td>
-        <td style="padding:.5rem .75rem;border:1px solid #bfdbfe"><strong>約6分（学習している人の平均：約60分）</strong></td>
-        <td style="padding:.5rem .75rem;border:1px solid #bfdbfe;font-size:.78rem;color:#6b7280">総務省「社会生活基本調査」2021年</td>
+      <tr style="background:var(--cream)">
+        <td style="padding:.5rem .75rem;border:1px solid var(--line);font-weight:600;color:var(--ink)">フィンガリング（細）</td>
+        <td style="padding:.5rem .75rem;border:1px solid var(--line)"><strong>約200m / 50g</strong></td>
+        <td style="padding:.5rem .75rem;border:1px solid var(--line);font-size:.8rem;color:var(--ink-soft)">約26〜30目</td>
       </tr>
-      <tr style="background:#eff6ff">
-        <td style="padding:.5rem .75rem;border:1px solid #bfdbfe;font-weight:600;color:#1e3a8a">スキルアップで給与上昇した割合</td>
-        <td style="padding:.5rem .75rem;border:1px solid #bfdbfe"><strong>資格取得後に年収増加を実感：約40%</strong></td>
-        <td style="padding:.5rem .75rem;border:1px solid #bfdbfe;font-size:.78rem;color:#6b7280">複数の転職・スキルアップ調査から参考値</td>
+      <tr style="background:#fff">
+        <td style="padding:.5rem .75rem;border:1px solid var(--line);font-weight:600;color:var(--ink)">DK（合太）</td>
+        <td style="padding:.5rem .75rem;border:1px solid var(--line)"><strong>約100m / 40g</strong></td>
+        <td style="padding:.5rem .75rem;border:1px solid var(--line);font-size:.8rem;color:var(--ink-soft)">約20〜24目</td>
       </tr>
-      <tr style="">
-        <td style="padding:.5rem .75rem;border:1px solid #bfdbfe;font-weight:600;color:#1e3a8a">習慣化に必要な平均日数</td>
-        <td style="padding:.5rem .75rem;border:1px solid #bfdbfe"><strong>約66日（21日は最低ライン）</strong></td>
-        <td style="padding:.5rem .75rem;border:1px solid #bfdbfe;font-size:.78rem;color:#6b7280">Phillippa Lally et al. (2010) European Journal of Social Psychology</td>
+      <tr style="background:var(--cream)">
+        <td style="padding:.5rem .75rem;border:1px solid var(--line);font-weight:600;color:var(--ink)">ワーステッド（並太）</td>
+        <td style="padding:.5rem .75rem;border:1px solid var(--line)"><strong>約100m / 50g</strong></td>
+        <td style="padding:.5rem .75rem;border:1px solid var(--line);font-size:.8rem;color:var(--ink-soft)">約18〜20目</td>
+      </tr>
+      <tr style="background:#fff">
+        <td style="padding:.5rem .75rem;border:1px solid var(--line);font-weight:600;color:var(--ink)">バルキー（極太）</td>
+        <td style="padding:.5rem .75rem;border:1px solid var(--line)"><strong>約50m / 50g</strong></td>
+        <td style="padding:.5rem .75rem;border:1px solid var(--line);font-size:.8rem;color:var(--ink-soft)">約12〜15目</td>
       </tr>
     </tbody>
   </table>
+  <p style="font-size:.78rem;color:var(--ink-soft);margin:.75rem 0 0">※ 上記は一般的な市販毛糸の目安です。実際の数値は製品ラベルをご確認ください。</p>
 </div>
 <!-- r20-tool-links -->
-<div id="tool-disclaimer" style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:10px;padding:1.25rem 1.5rem;margin:1.5rem 0;font-size:.875rem">
-  <p style="font-weight:700;color:#374151;margin:0 0 .5rem">⚠️ 計算結果の活用にあたって</p>
-  <ul style="margin:0;padding-left:1.25rem;color:#4b5563;line-height:1.9"><li><a href="https://www.caa.go.jp/" target="_blank" rel="noopener noreferrer" style="color:#4f46e5;font-size:.85rem">消費者庁「くらしの安心ガイド」</a></li></ul>
+<div id="tool-disclaimer" style="background:var(--cream2);border:1px solid var(--line);border-radius:10px;padding:1.25rem 1.5rem;margin:1.5rem 0;font-size:.875rem">
+  <p style="font-weight:700;color:var(--primary);margin:0 0 .5rem">⚠️ 計算結果の活用にあたって</p>
+  <ul style="margin:0;padding-left:1.25rem;color:var(--ink-soft);line-height:1.9"><li>計算結果はゲージを基にした参考値です。購入時は1〜2玉の余裕を持たせてください。</li><li><a href="https://www.caa.go.jp/" target="_blank" rel="noopener noreferrer" style="color:var(--accent-dark);font-size:.85rem">消費者庁「くらしの安心ガイド」</a></li></ul>
 </div>
-<h2 id="faq-h" style="font-size:1.05rem;font-weight:700;margin-bottom:12px;border-left:4px solid #4f46e5;padding-left:10px;">よくある質問</h2>
+<h2 id="faq-h" style="font-size:1.05rem;font-weight:700;margin-bottom:12px;border-left:4px solid var(--accent);padding-left:10px;color:var(--primary);">よくある質問（くわしく）</h2>
   <dl style="line-height:1.8;">
-    <dt style="font-weight:600;color:#1e293b;padding:8px 0 4px">Q. Q. 毛糸の種類と素材の選び方を教えてください</dt>
-    <dd style="font-size:.875rem;color:#475569;margin:0 0 12px;padding-left:12px;line-height:1.8">毛糸の素材は用途によって使い分けが重要です。ウール（羊毛）は保温性・弾力性に優れセーター・マフラーに最適ですが、洗濯に注意が必要です。コットン（綿）は夏向けで洗いやすくアレルギーが少ないため肌着・夏用小物に向いています。アクリルは低価格・洗濯機洗い可能で初心者向けです。カシミヤ・アルパカは高価ですが柔らかく高級感があります。太さ（糸番手）も重要で、細い糸は繊細な作品・太い糸は早く編める初心者向けです。</dd>
-    <dt style="font-weight:600;color:#1e293b;padding:8px 0 4px">Q. Q. 編み図の読み方がわからない場合はどうすればよいですか？</dt>
-    <dd style="font-size:.875rem;color:#475569;margin:0 0 12px;padding-left:12px;line-height:1.8">編み図は最初は難しく感じますが、基本的な記号を覚えると読めるようになります。棒針編みの基本は「表目（V字）」「裏目（横棒）」「かけ目」「左上二目一度（減らし目）」です。かぎ針編みは「鎖編み（○）」「細編み（×）」「長編み（T字）」が基本です。日本の編み図は統一された記号体系（日本ヴォーグ社標準）を使っていることが多いです。YouTubeや書籍の動画付き解説で実際の手の動きを確認しながら練習すると習得が早まります。</dd>
-    <dt style="font-weight:600;color:#1e293b;padding:8px 0 4px">Q. Q. 毛糸の量（グラム・玉数）が途中で足りなくなった場合はどうしますか？</dt>
-    <dd style="font-size:.875rem;color:#475569;margin:0 0 12px;padding-left:12px;line-height:1.8">毛糸が途中で足りなくなった場合、同じ色番号・ロット番号の毛糸を追加購入することが理想ですが、ロット違いは微妙な色差が出る場合があります。対策として「編み始め前に必要量より10〜20%多めに購入する」「セーターなどは両袖を同じロットで揃える」「残り糸が少なくなってきたら早めに追加注文する」があります。本計算ツールで必要グラム数を事前に把握することで、買い足しトラブルを防げます。</dd>
+    <dt style="font-weight:700;color:var(--primary);padding:8px 0 4px">Q. 毛糸の種類と素材の選び方を教えてください</dt>
+    <dd style="font-size:.875rem;color:var(--ink-soft);margin:0 0 12px;padding-left:12px;line-height:1.8">毛糸の素材は用途によって使い分けが重要です。ウール（羊毛）は保温性・弾力性に優れセーター・マフラーに最適ですが、洗濯に注意が必要です。コットン（綿）は夏向けで洗いやすくアレルギーが少ないため肌着・夏用小物に向いています。アクリルは低価格・洗濯機洗い可能で初心者向けです。カシミヤ・アルパカは高価ですが柔らかく高級感があります。太さ（糸番手）も重要で、細い糸は繊細な作品・太い糸は早く編める初心者向けです。</dd>
+    <dt style="font-weight:700;color:var(--primary);padding:8px 0 4px">Q. 編み図の読み方がわからない場合はどうすればよいですか？</dt>
+    <dd style="font-size:.875rem;color:var(--ink-soft);margin:0 0 12px;padding-left:12px;line-height:1.8">編み図は最初は難しく感じますが、基本的な記号を覚えると読めるようになります。棒針編みの基本は「表目（V字）」「裏目（横棒）」「かけ目」「左上二目一度（減らし目）」です。かぎ針編みは「鎖編み（○）」「細編み（×）」「長編み（T字）」が基本です。日本の編み図は統一された記号体系（日本ヴォーグ社標準）を使っていることが多いです。YouTubeや書籍の動画付き解説で実際の手の動きを確認しながら練習すると習得が早まります。</dd>
+    <dt style="font-weight:700;color:var(--primary);padding:8px 0 4px">Q. 毛糸の量（グラム・玉数）が途中で足りなくなった場合はどうしますか？</dt>
+    <dd style="font-size:.875rem;color:var(--ink-soft);margin:0 0 12px;padding-left:12px;line-height:1.8">毛糸が途中で足りなくなった場合、同じ色番号・ロット番号の毛糸を追加購入することが理想ですが、ロット違いは微妙な色差が出る場合があります。対策として「編み始め前に必要量より10〜20%多めに購入する」「セーターなどは両袖を同じロットで揃える」「残り糸が少なくなってきたら早めに追加注文する」があります。本計算ツールで必要グラム数を事前に把握することで、買い足しトラブルを防げます。</dd>
   </dl>
 </section>
 <!-- r27-tool-guide -->
