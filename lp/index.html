@@ -80,19 +80,30 @@ j=d.createElement(s),dl=l!="dataLayer"?"&l="+l:"";j.async=true;j.src=
         .trust span{display:flex;align-items:center;gap:7px;font-size:13.5px;font-weight:600;text-shadow:0 1px 6px rgba(0,0,0,.4);}
         .trust span::before{content:"✓";display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;border-radius:50%;background:var(--accent);color:#fff;font-size:12px;}
 
-        /* hero result card */
-        .hero-card{position:relative;background:#fff;border-radius:18px;box-shadow:0 24px 60px rgba(58,42,26,.35);padding:22px;color:var(--ink);}
-        .hero-card .ribbon{position:absolute;top:-12px;right:16px;background:linear-gradient(135deg,var(--accent),var(--accent-dark));color:#fff;font-size:12px;font-weight:700;padding:6px 14px;border-radius:999px;box-shadow:0 8px 18px rgba(224,138,76,.45);letter-spacing:.02em;}
-        .hero-card h3{font-size:14px;color:var(--ink-soft);font-weight:600;margin-bottom:14px;display:flex;align-items:center;gap:8px;}
-        .hero-card h3 .dot{width:9px;height:9px;border-radius:50%;background:var(--accent);}
-        .donut{width:128px;height:128px;border-radius:50%;margin:0 auto;background:conic-gradient(var(--accent) 0 72%,#EFE6D8 72% 100%);display:flex;align-items:center;justify-content:center;}
-        .donut .inner{width:92px;height:92px;border-radius:50%;background:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;}
-        .donut .inner b{font-size:26px;color:var(--primary);line-height:1;}
-        .donut .inner small{font-size:11px;color:var(--ink-soft);margin-top:3px;}
-        .hc-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:16px;}
-        .hc-box{background:var(--cream);border:1px solid var(--line);border-radius:10px;padding:12px;text-align:center;}
-        .hc-box .v{font-size:22px;font-weight:700;color:var(--accent-dark);}
-        .hc-box .l{font-size:11px;color:var(--ink-soft);margin-top:3px;}
+        /* hero app mockup card */
+        .hero-card{position:relative;background:#fff;border-radius:18px;box-shadow:0 24px 60px rgba(58,42,26,.38);color:var(--ink);overflow:hidden;}
+        .hero-card .ribbon{position:absolute;top:14px;right:14px;z-index:2;background:linear-gradient(135deg,var(--accent),var(--accent-dark));color:#fff;font-size:11.5px;font-weight:700;padding:5px 13px;border-radius:999px;box-shadow:0 8px 18px rgba(224,138,76,.45);letter-spacing:.02em;}
+        .hc-bar{display:flex;align-items:center;gap:7px;padding:11px 16px;background:var(--cream2);border-bottom:1px solid var(--line);}
+        .hc-bar .dots{display:flex;gap:5px;}
+        .hc-bar .dots i{width:9px;height:9px;border-radius:50%;background:#D9C7AE;display:block;}
+        .hc-bar .ttl{font-size:12px;font-weight:700;color:var(--primary);margin-left:4px;}
+        .hc-body{padding:18px;}
+        .app-row{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:9px 13px;background:var(--cream);border:1px solid var(--line);border-radius:10px;margin-bottom:9px;}
+        .app-row .lab{font-size:12px;color:var(--ink-soft);font-weight:600;display:flex;align-items:center;gap:7px;}
+        .app-row .lab img{width:18px;height:18px;}
+        .app-row .val{font-size:13px;font-weight:700;color:var(--primary);}
+        .app-calc{width:100%;text-align:center;background:linear-gradient(135deg,var(--accent),var(--accent-dark));color:#fff;font-weight:700;font-size:13.5px;padding:11px;border-radius:10px;margin:5px 0 16px;box-shadow:0 6px 14px rgba(224,138,76,.32);}
+        .hc-result{display:flex;gap:16px;align-items:center;background:var(--cream);border:1px solid var(--line);border-radius:12px;padding:14px;}
+        .hc-result h3{font-size:12.5px;color:var(--ink-soft);font-weight:600;margin-bottom:10px;display:flex;align-items:center;gap:7px;}
+        .hc-result h3 .dot{width:8px;height:8px;border-radius:50%;background:var(--accent);}
+        .donut{width:104px;height:104px;border-radius:50%;flex-shrink:0;background:conic-gradient(var(--accent) 0 72%,#EFE6D8 72% 100%);display:flex;align-items:center;justify-content:center;}
+        .donut .inner{width:74px;height:74px;border-radius:50%;background:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;}
+        .donut .inner b{font-size:22px;color:var(--primary);line-height:1;}
+        .donut .inner small{font-size:10px;color:var(--ink-soft);margin-top:3px;}
+        .hc-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;flex:1;}
+        .hc-box{background:#fff;border:1px solid var(--line);border-radius:9px;padding:9px 10px;text-align:center;}
+        .hc-box .v{font-size:17px;font-weight:700;color:var(--accent-dark);line-height:1.2;}
+        .hc-box .l{font-size:10.5px;color:var(--ink-soft);margin-top:2px;}
 
         /* ===== Section common ===== */
         section{padding:64px 0;}
@@ -244,16 +255,27 @@ j=d.createElement(s),dl=l!="dataLayer"?"&l="+l:"";j.async=true;j.src=
         <span>初心者向けガイド付き</span>
       </div>
     </div>
-    <!-- mock result card -->
+    <!-- app mockup card -->
     <div class="hero-card">
       <span class="ribbon">🧶 計算サンプル</span>
-      <h3><span class="dot"></span>計算結果プレビュー</h3>
-      <div class="donut"><div class="inner"><b>620<small>m 必要</small></b></div></div>
-      <div class="hc-grid">
-        <div class="hc-box"><div class="v">7玉</div><div class="l">玉数の目安</div></div>
-        <div class="hc-box"><div class="v">約620m</div><div class="l">必要な長さ</div></div>
-        <div class="hc-box"><div class="v">280g</div><div class="l">重量の目安</div></div>
-        <div class="hc-box"><div class="v">¥3,500</div><div class="l">材料費目安</div></div>
+      <div class="hc-bar">
+        <span class="dots"><i></i><i></i><i></i></span>
+        <span class="ttl">毛糸量計算ツール</span>
+      </div>
+      <div class="hc-body">
+        <div class="app-row"><span class="lab"><img src="../assets/icons/split/03-05.png" alt="">作品サイズ</span><span class="val">マフラー 20×160cm</span></div>
+        <div class="app-row"><span class="lab"><img src="../assets/icons/split/01-01.png" alt="">糸の太さ</span><span class="val">並太（ワーステッド）</span></div>
+        <div class="app-row"><span class="lab"><img src="../assets/icons/split/01-06.png" alt="">ゲージ</span><span class="val">18目 × 24段 / 10cm</span></div>
+        <div class="app-calc">🧶 今すぐ計算する</div>
+        <div class="hc-result">
+          <div class="donut"><div class="inner"><b>620<small>m 必要</small></b></div></div>
+          <div class="hc-grid">
+            <div class="hc-box"><div class="v">7玉</div><div class="l">玉数の目安</div></div>
+            <div class="hc-box"><div class="v">約620m</div><div class="l">必要な長さ</div></div>
+            <div class="hc-box"><div class="v">280g</div><div class="l">重量の目安</div></div>
+            <div class="hc-box"><div class="v">¥3,500</div><div class="l">材料費目安</div></div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
